@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dinnis Bolaños — Growth & Community Manager</title>
+  <meta name="description" content="I help online businesses grow, monetize, and build trust using viral content, engaged communities, and reliable digital systems." />
+  <style>
+    :root{
+      --bg:#0b0f19; --card:#0f1629; --text:#eaf0ff; --muted:#a9b4d0;
+      --line:rgba(255,255,255,.08); --accent:#7c5cff; --accent2:#2ee59d;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --r:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(124,92,255,.18), transparent 55%),
+                  radial-gradient(900px 600px at 85% 10%, rgba(46,229,157,.12), transparent 50%),
+                  var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 80px}
+    .nav{
+      position:sticky; top:0; z-index:5;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,25,.65);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{max-width:1100px; margin:0 auto; padding:12px 18px; display:flex; gap:14px; align-items:center; justify-content:space-between;}
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.2px}
+    .dot{width:10px; height:10px; border-radius:99px; background: linear-gradient(135deg,var(--accent),var(--accent2))}
+    .nav-links{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .pill{
+      padding:8px 12px; border:1px solid var(--line); border-radius:999px; color:var(--muted);
+      font-size:13px;
+    }
+    .pill:hover{border-color:rgba(124,92,255,.45); color:var(--text)}
+    .btn{
+      padding:10px 14px; border-radius:12px; font-weight:700; font-size:14px;
+      border:1px solid rgba(124,92,255,.35);
+      background: linear-gradient(135deg, rgba(124,92,255,.18), rgba(46,229,157,.10));
+      box-shadow: 0 10px 25px rgba(124,92,255,.12);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .hero{padding:46px 0 22px}
+    .kicker{color:var(--muted); font-weight:600; letter-spacing:.2px}
+    h1{margin:.35rem 0 .6rem; font-size: clamp(32px, 4.5vw, 54px); line-height:1.05}
+    .sub{max-width:720px; color:var(--muted); font-size:16px}
+    .cta{margin-top:18px; display:flex; gap:12px; flex-wrap:wrap}
+    .ghost{
+      padding:10px 14px; border-radius:12px; border:1px solid var(--line); color:var(--text);
+      background: rgba(255,255,255,.02);
+    }
+    .ghost:hover{border-color:rgba(46,229,157,.40)}
+    .proofbar{
+      margin-top:22px;
+      display:grid; gap:12px; grid-template-columns: repeat(5, minmax(0,1fr));
+    }
+    .stat{
+      background: rgba(255,255,255,.02);
+      border:1px solid var(--line);
+      border-radius: var(--r);
+      padding:14px;
+      box-shadow: var(--shadow);
+      min-height:74px;
+    }
+    .stat b{display:block; font-size:18px}
+    .stat span{color:var(--muted); font-size:12.5px}
+    .grid{display:grid; gap:14px}
+    .sec{margin-top:42px}
+    .sec h2{margin:0 0 10px; font-size:24px}
+    .sec p{margin:0; color:var(--muted)}
+    .cards{
+      margin-top:14px;
+      display:grid; gap:14px; grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    .card{
+      background: rgba(255,255,255,.02);
+      border:1px solid var(--line);
+      border-radius: var(--r);
+      padding:16px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{margin:0 0 6px; font-size:16px}
+    .card ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:14px}
+    .tag{
+      display:inline-block; font-size:12px; color:var(--muted);
+      border:1px solid var(--line); padding:5px 10px; border-radius:999px;
+      margin-right:8px; margin-top:8px;
+    }
+    .cases{
+      margin-top:14px;
+      display:grid; gap:14px; grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    .case-top{display:flex; justify-content:space-between; gap:10px; align-items:flex-start}
+    .case-top b{font-size:15px}
+    .small{font-size:13px; color:var(--muted)}
+    .quote{
+      border-left:3px solid rgba(124,92,255,.6);
+      padding:10px 12px; background: rgba(124,92,255,.06);
+      border-radius: 10px;
+      color: var(--text);
+    }
+    .contact{
+      margin-top:14px;
+      display:grid; gap:14px; grid-template-columns: 2fr 1fr;
+    }
+    .input{
+      width:100%; padding:12px 12px; border-radius:12px; border:1px solid var(--line);
+      background: rgba(0,0,0,.18); color:var(--text);
+    }
+    .footer{margin-top:44px; color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:18px}
+    @media (max-width: 980px){
+      .proofbar{grid-template-columns: repeat(2, minmax(0,1fr))}
+      .cards{grid-template-columns: 1fr}
+      .cases{grid-template-columns: 1fr}
+      .contact{grid-template-columns: 1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="dot"></span> Dinnis Bolaños</div>
+      <div class="nav-links">
+        <a class="pill" href="#services">Services</a>
+        <a class="pill" href="#proof">Proof</a>
+        <a class="pill" href="#case-studies">Case Studies</a>
+        <a class="pill" href="#pricing">Pricing</a>
+        <a class="btn" href="#contact">Message Me</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero" id="top">
+      <div class="kicker">Growth & Community Manager for Online Businesses</div>
+      <h1>Turn attention into trust, and trust into revenue.</h1>
+      <p class="sub">
+        I help online brands grow, monetize, and scale safely using high-performance short-form content,
+        engaged communities, and reliable digital operations — backed by real proof.
+      </p>
+
+      <div class="cta">
+        <a class="btn" href="#contact">Hire Me (Chat-based)</a>
+        <a class="ghost" href="#case-studies">See Proof</a>
+        <a class="ghost" href="#services">What I Do</a>
+      </div>
+
+      <div class="proofbar" id="proof">
+        <div class="stat"><b>149M+</b><span>Organic views generated</span></div>
+        <div class="stat"><b>930K+</b><span>Subscribers grown</span></div>
+        <div class="stat"><b>4,900+</b><span>Community members managed</span></div>
+        <div class="stat"><b>50+</b><span>Verified transactions handled</span></div>
+        <div class="stat"><b>99%</b><span>Positive feedback rate</span></div>
+      </div>
+    </section>
+
+    <section class="sec" id="services">
+      <h2>Services</h2>
+      <p>I combine three engines so businesses don’t just get “content” — they get a working growth system.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🚀 Audience Growth & Content Engine</h3>
+          <p class="small">Short-form strategy + editing + optimization for compounding organic reach.</p>
+          <ul>
+            <li>YouTube Shorts / Reels / TikTok editing</li>
+            <li>Hook & retention upgrades</li>
+            <li>Viral format testing</li>
+            <li>Posting cadence + basic analytics</li>
+          </ul>
+          <div>
+            <span class="tag">Traffic</span><span class="tag">Virality</span><span class="tag">Optimization</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🧑‍🤝‍🧑 Community & Engagement Management</h3>
+          <p class="small">Build and run communities that turn viewers into loyal buyers.</p>
+          <ul>
+            <li>Facebook group growth + moderation</li>
+            <li>Engagement systems & content calendar</li>
+            <li>Member retention & trust building</li>
+            <li>Marketplace / group operations</li>
+          </ul>
+          <div>
+            <span class="tag">Community</span><span class="tag">Retention</span><span class="tag">Monetization</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🔐 Digital Operations & Trust Systems</h3>
+          <p class="small">Protect reputation and transactions so the business scales safely.</p>
+          <ul>
+            <li>Transaction moderation / middleman workflow</li>
+            <li>Dispute handling + client coordination</li>
+            <li>Process documentation</li>
+            <li>Trust & reputation management</li>
+          </ul>
+          <div>
+            <span class="tag">Trust</span><span class="tag">Operations</span><span class="tag">Safety</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="case-studies">
+      <h2>Case Studies</h2>
+      <p>Real examples (short-form reach). More case studies can be added as you rebrand.</p>
+
+      <div class="cases">
+        <div class="card">
+          <div class="case-top">
+            <b>19M organic views — YouTube Short</b>
+            <span class="small">Short-form</span>
+          </div>
+          <p class="small">Retention-focused edits and format optimization to maximize completion rate and shares.</p>
+          <p class="small"><b>Result:</b> Massive exposure + audience growth.</p>
+          <p class="small"><a class="pill" href="https://youtube.com/shorts/Qu7D-GUpeio" target="_blank" rel="noopener">Watch</a></p>
+        </div>
+
+        <div class="card">
+          <div class="case-top">
+            <b>16M organic views — YouTube Short</b>
+            <span class="small">Short-form</span>
+          </div>
+          <p class="small">Fast pacing + visual clarity to improve retention and repeat views.</p>
+          <p class="small"><b>Result:</b> Viral distribution via Shorts feed.</p>
+          <p class="small"><a class="pill" href="https://youtube.com/shorts/t0YrYvDwBes" target="_blank" rel="noopener">Watch</a></p>
+        </div>
+
+        <div class="card">
+          <div class="case-top">
+            <b>10M organic views — YouTube Short</b>
+            <span class="small">Short-form</span>
+          </div>
+          <p class="small">Hook + story beat tightening to sustain attention through the first 3 seconds.</p>
+          <p class="small"><b>Result:</b> High engagement at scale.</p>
+          <p class="small"><a class="pill" href="https://youtube.com/shorts/n0sFoEiOjXA" target="_blank" rel="noopener">Watch</a></p>
+        </div>
+
+        <div class="card">
+          <div class="case-top">
+            <b>Creator brand (rebranding phase)</b>
+            <span class="small">Channel</span>
+          </div>
+          <p class="small">Channel link: ThePresentPath1 (currently rebranding).</p>
+          <p class="small"><a class="pill" href="https://www.youtube.com/@ThePresentPath1" target="_blank" rel="noopener">Visit Channel</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="pricing">
+      <h2>Pricing</h2>
+      <p>Premium, simple, and chat-first — no calls required.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🟢 Essential — $750 / month</h3>
+          <p class="small">For brands starting to scale with consistent output.</p>
+          <ul>
+            <li>20–30 Shorts per month</li>
+            <li>Basic optimization</li>
+            <li>Light community moderation</li>
+            <li>Monthly performance summary</li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-color: rgba(124,92,255,.35);">
+          <h3>🔵 Growth — $1,500 / month</h3>
+          <p class="small"><b>Most popular</b> — designed to build a working growth engine.</p>
+          <ul>
+            <li>40–60 Shorts per month</li>
+            <li>Viral format optimization</li>
+            <li>Community management</li>
+            <li>Trust & moderation systems</li>
+            <li>Priority chat support</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🔴 Scale — $3,000 / month</h3>
+          <p class="small">For serious online businesses running real revenue.</p>
+          <ul>
+            <li>Unlimited short-form content</li>
+            <li>Full strategy + execution</li>
+            <li>Community & monetization systems</li>
+            <li>Operations + reputation management</li>
+            <li>Weekly performance updates</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:10px;">
+        All plans are month-to-month. Communication is via chat/email for speed and clarity.
+      </p>
+    </section>
+
+    <section class="sec" id="contact">
+      <h2>Contact (Chat-based)</h2>
+      <p>Send a message with: your business, your goal, and your current bottleneck. I’ll reply with a clear plan.</p>
+
+      <div class="contact">
+        <div class="card">
+          <h3>Message Template</h3>
+          <p class="small">Copy, fill in, and send via email/WhatsApp/DM.</p>
+          <textarea class="input" rows="8">Hi Dinnis,
+Business: ________
+Goal (next 30–90 days): ________
+Main bottleneck: ________
+Links (website/socials): ________
+Budget range: ________
+</textarea>
+          <div class="cta" style="margin-top:12px;">
+            <a class="btn" href="mailto:dennispogi156@gmail.com?subject=Growth%20Partner%20Inquiry">Email Me</a>
+            <a class="ghost" href="https://wa.me/639773760949" target="_blank" rel="noopener">WhatsApp Me</a>
+            <a class="ghost" href="viber://chat?number=+639566259112">Viber</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Quick Links</h3>
+          <p class="small">• YouTube: <a class="pill" href="https://www.youtube.com/@ThePresentPath1" target="_blank" rel="noopener">ThePresentPath1</a></p>
+          <p class="small">• TikTok: <a class="pill" href="https://www.tiktok.com/@crtn.ds" target="_blank" rel="noopener">@crtn.ds</a></p>
+          <p class="small">• OnlineJobsPH: <a class="pill" href="https://v2.onlinejobs.ph/jobseekers/info/2636599" target="_blank" rel="noopener">Profile</a></p>
+          <p class="small">• Email: <a class="pill" href="mailto:dennispogi156@gmail.com">dennispogi156@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Dinnis Bolaños — Growth & Community Manager. Built for chat-based collaboration.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
